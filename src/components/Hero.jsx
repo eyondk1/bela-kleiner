@@ -9,7 +9,7 @@ const Hero = () => {
       {/* Baseball logo background */}
       <div className="absolute inset-0 flex justify-left items-center pointer-events-none">
         <img 
-          src="src/assets/baseball-logo.png" // Replace with your baseball logo image
+          src="/images/baseball-logo.png" // Replace with your baseball logo image
           alt="Baseball Logo Background"
           className="opacity-30 w-[600px] md:w-[100px] lg:w-[800px] object-contain"
         />
@@ -55,7 +55,7 @@ const Hero = () => {
             <div className="relative rounded-md overflow-hidden shadow-2xl max-w-md mx-auto bg-gradient-to-br from-secondary/20 via-secondary/10 to-primary/30 p-6 border-4 border-white border-dashed border-red-600">
               <div className="relative">
                 <img 
-                  src="src/assets/jim.png" // replace with Jim Street’s photo
+                  src="/images/jim.png" // replace with Jim Street’s photo
                   alt="Jim Street"
                   className="w-full max-w-sm md:max-w-md h-auto object-cover rounded-md shadow-xl"
                   style={{ maxHeight: '450px' }}

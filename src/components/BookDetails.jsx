@@ -21,7 +21,7 @@ const BookDetails = () => {
             <div className="bg-white rounded-md p-8 shadow-xl border-2 border-primary/20">
               <div className="mb-6 relative">
                 <img 
-                  src="/images/book.webp" // Replace with the actual book cover
+                  src="/images/book.png" // Replace with the actual book cover
                   alt={`${book.title} - Book Cover`}
                   className="w-full max-w-sm mx-auto rounded-md shadow-2xl border-4 border-white"
                 />
