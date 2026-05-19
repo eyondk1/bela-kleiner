@@ -15,7 +15,6 @@ const Layout = () => {
       <About />
       <BookDetails />
       <Testimonials />
-      <Newsletter />
       <Footer />
     </div>
   );

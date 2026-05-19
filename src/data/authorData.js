@@ -1,59 +1,60 @@
 export const authorData = {
-  name: "Carol Cutrona",
-  fullName: "Carol Cutrona",
-  email: "sweetpea105@comcast.net",
-  tagline: "Historical Fiction Author | Civil War Scholar",
+  name: "Jim Street",
+  fullName: "Jim Street",
+  email: "",
+  tagline: "Sportswriter | Memoirist",
   
   book: {
-    title: "By Lantern's Light",
-    fullTitle: "By Lantern's Light",
-    description: `In 1861 a courageous band of women brave death and defy political powers to render battlefield relief, launching the first MASH Unit on American soil. By these deeds they write their page in history.
+    title: "Life from the Press Box",
+    fullTitle: "Life from the Press Box: Forty Years with the Mustache Gang, O.J., John Madden, the Big Unit, Sweet Lou, Junior Griffey and Ichiro…",
+    description: `Life from the Press Box chronicles Jim Street’s 40-year career as a sports journalist, starting from his early days covering his local paper in high school through decades of reporting on Major League Baseball, professional football, golf, and other major sporting events. It offers behind-the-scenes stories and firsthand accounts of encounters with legendary athletes and coaches.
 
-This dramatic, fact-based story is told through the eyes of Havannah, a fiery but shallow debutante, who joins the first team of women to work the battlefields during the Civil War. While blood flows and Minie balls fly, Havannah squares off with head field hospital nurse who vows to dismiss her from the corps. The heroine's love affair with a crusty army surgeon adds fuel to the fire.
+Highlights include:
+- Covering the Oakland Athletics’ famed “Mustache Gang” of the early 1970s — Catfish Hunter, Reggie Jackson, Rollie Fingers and others.
+- Personal stories from covering World Series, All-Star Games, the first World Baseball Classic, Super Bowls, Rose Bowls, golf majors and more.
+- Reflections on careers of sports icons like O.J. Simpson, John Madden, Randy Johnson, and Ichiro Suzuki.
+- Anecdotes from his time with teams such as the Oakland Athletics, San Francisco Giants, San Francisco 49ers, Oakland Raiders, and Seattle Mariners.
 
-Meanwhile, sisters at home battle enemies who pledge to squash their efforts to establish the innovative relief plan. On the trail women, board wagons hauled by cantankerous mules, strap soup pots to wagons, forge mountain passes, dodge bullets, set up field hospitals alongside battlefields and scour the land, seeking life among the dead. The weapons they carried were not muskets but hot soup, whispered prayers and compassion, bolstered by fierce determination.`,
+The book blends sports history, personal memoir, and journalism insight, showing both the glamour and grind of sports reporting.`,
     
-    themes: ["Civil War Era", "Women's History", "Battlefield Medicine", "Romance", "Historical Fiction"],
+    themes: ["Sports Memoir", "Baseball History", "Football Coverage", "Journalism", "Personal Memoir"],
     
     details: {
       format: "Paperback & eBook",
-      genre: "Historical Fiction",
-      setting: "American Civil War, 1861"
+      genre: "Sports Memoir",
+      setting: "United States, 1970s–2010s"
     }
   },
   
   authorBio: {
-    fullBio: `A graduate of California State University at Northridge, Carol writes in a variety of genres. She has written a screenplay based on the novel. Her work has been published in national periodicals, as well as in Braille. She is a member of the National League of American Pen Women, Simi Valley Branch, and has served on the board of directors.
+    fullBio: `Jim Street is a retired American sportswriter who spent four decades covering professional sports, particularly on the West Coast. He began as a young reporter in high school and worked for major newspapers including the San Jose Mercury-News and later MLB.com. Street earned his bachelor's degree in Journalism from San Jose State University and covered baseball and football throughout his career.
 
-Today, she lives in the South Carolina Lowcountry with husband, John, and divides her time between writing, speaking on the topic of Women in the Civil War, acting and participating in civic activities. She is working on her next novel and screenplay, Maggie, a tale that reveals her adventures as a young social worker on the mean streets of the City of Angels.`,
+He has witnessed and reported on multiple World Series and historic MLB moments, covered NFL franchises like the 49ers and Raiders, and now resides in Seattle, Washington, with his family.
+
+Street is a lifetime member of the Baseball Writers’ Association of America, giving him ongoing voting privileges for the Baseball Hall of Fame.`,
     
-    education: "California State University at Northridge",
-    memberships: ["National League of American Pen Women", "Simi Valley Branch Board Member"],
-    location: "South Carolina Lowcountry",
-    research: `My research for this book has directed me down many interesting roads. In fact, I have been studying women's work in the Civil War for many years and never tire of the fascinating characters and stories I've unearthed.`
+    education: "San Jose State University, Journalism",
+    memberships: ["Baseball Writers’ Association of America"],
+    location: "Seattle, Washington",
+    research: `Street’s career involved extensive reporting on professional baseball, football, and golf, offering rich insider perspectives on athletes, teams, and major sporting events over four decades.`
   },
   
   testimonials: [
     {
-      name: "Janet S. Foerster",
-      rating: 5,
-      title: "Great First Novel",
-      review: `"By Lantern's Light" spins an exciting tale about women's contributions during the Civil War. The women who worked under the flag of the U.S. Sanitary Commission deserve to be remembered! Having been an attorney in Washington, I was intrigued and impressed by what those women achieved in the halls of government at a time when ladies were seldom heard much less allowed to be active participants. A wonderful first novel for Mrs. Cutrona - a talented writer! I can't wait for a sequel and hopefully a movie.`,
-      date: "May 12, 2001"
+      name: "Goodreads Readers",
+      rating: 3.8,
+      title: "Insightful Sports Memoir",
+      review: `Life from the Press Box offers a rich collection of personal stories and a nostalgic look at sports history through the eyes of a veteran journalist. Fans of baseball, football, and sports writing will appreciate Street's firsthand accounts and behind-the-scenes anecdotes.`,
+      date: "Aggregated 2014–2015"
     },
     {
-      name: "Debra DeForty",
-      rating: 5,
-      title: "By Lantern's Light",
-      review: `By Lantern's Light is a fascinating book, telling the story about what women accomplished during the Civil War, both on the fields and behind the lines in rendering battlefield relief. The story presents all the drama of that era; yet love, adventure and humor play well upon the pages, enticing the reader to read on. Being a nurse, I really appreciated what women were able to do during that time period and with so little. By Lantern's Light is a good read and an interesting historical novel.`,
-      date: "May 26, 2001"
-    },
-    {
-      name: "Margaret V. Shedd",
-      rating: 5,
-      title: "Avid Reader Discovers New Talent",
-      review: `Never underestimate the dedication and valor of the ladies who volunteered during our Nation's Civil War. Carol J. Cutrona has given us a very moving and informative historical novel. As an avid reader, I highly recommend this book to those of you who enjoy burning the midnight oil while discovering new and talented authors.`,
-      date: "June 22, 2001"
+      name: "Katie",
+      rating: 3,
+      title: "Insightful Sports Memoir",
+      review: `This is was interesting. It needed better editing or maybe better ebook formatting. A lot of sentences were cut off in the middle or combined. There was also some structural issues.
+
+It was really more about Jim Street's life than sports. Like, there were a lot important Mariners events that were glossed over, in a way. There were also digs at some sportswriting and players, which was . . . interesting.`,
+      date: "Aggregated 2014–2015"
     }
   ]
 };

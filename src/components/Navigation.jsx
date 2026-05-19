@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaHome, FaUser, FaBook, FaEnvelope, FaStar, FaFire } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaUser, FaBook, FaEnvelope, FaBaseballBall, FaStar } from 'react-icons/fa';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,9 +41,7 @@ const Navigation = () => {
     e.preventDefault();
     setActiveTab(id);
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
   };
 
@@ -58,11 +56,11 @@ const Navigation = () => {
           onClick={(e) => handleClick(e, '#home', 'home')}
         >
           <div className="relative">
-            <FaFire className="text-primary group-hover:scale-110 transition-transform duration-300" size={22} />
+            <FaBaseballBall className="text-primary group-hover:scale-110 transition-transform duration-300" size={22} />
             <FaStar className="text-secondary absolute -top-2 -right-2 text-xs opacity-0 group-hover:opacity-100 transition-all duration-300" />
           </div>
           <span className="text-xl md:text-2xl font-display font-bold text-primary">
-            Carol Cutrona
+            Jim Street
           </span>
         </a>
 
@@ -110,37 +108,21 @@ const Navigation = () => {
                 <span className="text-base">{item.name}</span>
                 {activeTab === item.id && (
                   <span className="ml-auto">
-                    <FaFire size={16} className="text-secondary" />
+                    <FaBaseballBall size={16} className="text-secondary" />
                   </span>
                 )}
               </a>
             ))}
-            
-            <div className="mt-4 pt-4 border-t border-primary/20 text-center">
-              <p className="text-dark/50 text-xs flex items-center justify-center gap-2">
-                <FaFire size={10} className="text-primary" />
-                By Lantern's Light - A Civil War Epic
-                <FaStar size={10} className="text-secondary" />
-              </p>
-            </div>
           </div>
         </div>
       )}
 
       <style>{`
         @keyframes slideDown {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(-10px); }
+          to { opacity: 1; transform: translateY(0); }
         }
-        .animate-slide-down {
-          animation: slideDown 0.3s ease-out;
-        }
+        .animate-slide-down { animation: slideDown 0.3s ease-out; }
       `}</style>
     </nav>
   );

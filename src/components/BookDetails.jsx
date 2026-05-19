@@ -1,6 +1,5 @@
 import React from 'react';
-import { FaBook, FaStar, FaQuoteLeft, FaHeart, FaFire } from 'react-icons/fa';
-import { GiCrossedSwords, GiMedicines } from 'react-icons/gi';
+import { FaBook, FaStar, FaQuoteLeft, FaHeart, FaFire, FaBaseballBall, FaFootballBall } from 'react-icons/fa';
 import { authorData } from '../data/authorData';
 
 const BookDetails = () => {
@@ -10,9 +9,11 @@ const BookDetails = () => {
     <section id="book" className="py-20 bg-gradient-to-b from-light to-secondary/10">
       <div className="container-custom mx-auto">
         <div className="text-center mb-12">
-          <h2 className="section-title">By Lantern's Light</h2>
+          <h2 className="section-title">{book.title}</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="section-subtitle">A Civil War Epic of Courage, Compassion, and Determination</p>
+          <p className="section-subtitle">
+            A Sports Memoir Sharing Behind-the-Scenes Stories of Legendary Athletes
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -20,8 +21,8 @@ const BookDetails = () => {
             <div className="bg-white rounded-md p-8 shadow-xl border-2 border-primary/20">
               <div className="mb-6 relative">
                 <img 
-                  src="/images/lantern.jpg"
-                  alt="By Lantern's Light - Book Cover"
+                  src="src/assets/book.webp" // Replace with the actual book cover
+                  alt={`${book.title} - Book Cover`}
                   className="w-full max-w-sm mx-auto rounded-md shadow-2xl border-4 border-white"
                 />
                 <div className="absolute -top-3 -right-3 bg-primary text-white rounded-full p-2 shadow-lg">
@@ -32,30 +33,26 @@ const BookDetails = () => {
               <div className="text-center bg-secondary/10 rounded-md p-4">
                 <h3 className="text-2xl font-display font-bold text-primary mb-2">{book.fullTitle}</h3>
                 <div className="w-16 h-0.5 bg-primary mx-auto my-2"></div>
-                <p className="text-dark/60 text-sm">By Carol Cutrona</p>
+                <p className="text-dark/60 text-sm">By {authorData.fullName}</p>
                 <div className="flex justify-center gap-1 mt-3">
                   {[...Array(5)].map((_, i) => (
                     <FaStar key={i} size={16} className="text-primary" />
                   ))}
                 </div>
-                <p className="text-xs text-primary mt-2 font-semibold">⚔️ A Story of Unsung Heroes ⚔️</p>
+                <p className="text-xs text-primary mt-2 font-semibold">⚾ Behind the Scenes of Major League Baseball & NFL ⚽</p>
               </div>
               
               <div className="flex justify-center gap-2 mt-4">
-                <div className="w-8 h-8 bg-primary rounded-full opacity-50 flex items-center justify-center text-white">⚔️</div>
-                <div className="w-8 h-8 bg-secondary rounded-full opacity-50 flex items-center justify-center">🏥</div>
-                <div className="w-8 h-8 bg-accent rounded-full opacity-50 flex items-center justify-center text-white">🕯️</div>
+                <div className="w-8 h-8 bg-primary rounded-full opacity-50 flex items-center justify-center text-white">
+                  <FaBaseballBall />
+                </div>
+                <div className="w-8 h-8 bg-secondary rounded-full opacity-50 flex items-center justify-center">
+                  <FaFootballBall />
+                </div>
+                <div className="w-8 h-8 bg-accent rounded-full opacity-50 flex items-center justify-center text-white">
+                  <FaBook />
+                </div>
               </div>
-            </div>
-            
-            {/* MASH Image - Historical Addition */}
-            <div className="mt-6">
-              <img 
-                src="/images/mash.png"
-                alt="Civil War MASH Unit - Historical Hospital on Wheels"
-                className="w-full max-w-full mx-auto rounded-md shadow-2xl border-2 border-primary/30"
-              />
-              <p className="text-center text-xs text-dark/50 mt-2">Civil War field hospital - The first MASH units</p>
             </div>
           </div>
 
@@ -66,7 +63,7 @@ const BookDetails = () => {
 
             <div className="mb-6">
               <h4 className="font-semibold text-primary mb-3 flex items-center gap-2">
-                <GiCrossedSwords size={20} />
+                <FaBook size={20} />
                 Themes Explored:
               </h4>
               <div className="flex flex-wrap gap-2">
@@ -81,11 +78,11 @@ const BookDetails = () => {
             <div className="bg-secondary/15 rounded-md p-5 shadow-md mb-6 border-l-4 border-primary">
               <FaQuoteLeft className="text-primary mb-2" size={24} />
               <p className="text-dark/70 italic mb-3 text-sm">
-                "The weapons they carried were not muskets but hot soup, whispered prayers and compassion, bolstered by fierce determination."
+                "Life from the Press Box shares the real stories, triumphs, and challenges of a four-decade sportswriting career."
               </p>
               <div className="flex items-center gap-2 mt-2">
                 <FaHeart className="text-primary" size={14} />
-                <span className="text-xs text-primary font-semibold">— From By Lantern's Light</span>
+                <span className="text-xs text-primary font-semibold">— From {book.title}</span>
                 <FaHeart className="text-primary" size={14} />
               </div>
             </div>
@@ -114,7 +111,7 @@ const BookDetails = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="btn-primary flex-1 text-center flex items-center justify-center gap-2">
                 <FaBook size={16} />
-                Buy By Lantern's Light
+                Buy {book.title}
               </button>
               <button className="btn-outline flex-1 text-center flex items-center justify-center gap-2">
                 <FaStar size={16} />
@@ -125,24 +122,8 @@ const BookDetails = () => {
             <div className="text-center mt-4">
               <div className="inline-flex items-center gap-2 text-sm text-dark/50 bg-secondary/15 px-4 py-2 rounded-md">
                 <FaFire size={14} className="text-primary" />
-                <span>"A moving and informative historical novel" — Margaret V. Shedd</span>
+                <span>"An insightful memoir for sports fans and aspiring journalists" — Goodreads Review</span>
                 <FaFire size={14} className="text-primary" />
-              </div>
-            </div>
-
-            {/* Historical Addition - The MASH Unit Info */}
-            <div className="mt-6 p-5 bg-primary/5 rounded-md border border-primary/20">
-              <h4 className="font-semibold text-primary mb-3 flex items-center gap-2">
-                <GiMedicines size={20} />
-                Historical Note: The First MASH Units
-              </h4>
-              <p className="text-dark/70 text-sm leading-relaxed">
-                In the mud-slicked fields of the 1860s, the first precursors to the American MASH unit functioned as a revolutionary "hospital on wheels" that brought life-saving surgery directly to the front lines. Under the innovative Letterman System, horse-drawn "flying" ambulances and dedicated stretcher-bearers formed a tireless chain of survival, rushing the wounded from the chaos of battle to mobile cities of canvas. Inside these "hospitals under canvas," surgeons and dedicated women of the relief corps worked through the night by the flickering glow of oil lanterns, performing grueling procedures on improvised tables to combat shock and infection. This blueprint of rapid-response medicine, pioneered by courageous volunteers who refused to wait for the wounded to reach distant cities, established the fundamental principle that would define military medicine for centuries to follow: bringing the hospital to the soldier.
-              </p>
-              <div className="mt-3 flex items-center gap-2 text-xs text-primary">
-                <FaFire size={12} />
-                <span>— From the historical archives of Civil War medicine</span>
-                <FaFire size={12} />
               </div>
             </div>
           </div>

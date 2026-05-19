@@ -3,34 +3,47 @@
 @theme {
   --font-display: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
-  
-  /* Olive Drab & Khaki Civil War Theme */
-  --color-primary: #4B5320;
-  --color-primary-dark: #3A4018;
-  --color-primary-light: #6B7340;
-  --color-secondary: #C3B091;
-  --color-secondary-dark: #A89878;
-  --color-secondary-light: #D4C4A8;
-  --color-accent: #8B7355;
-  --color-accent-light: #A0896E;
-  --color-dark: #2C2418;
-  --color-light: #F5F0E6;
-  --color-khaki: #D4C4A8;
-  --color-olive: #5B6B2C;
+
+  /* Baseball Colorway */
+  --color-primary: #0B3D91;        /* Navy blue for headings, nav, buttons */
+  --color-primary-dark: #072A5E;   /* Darker navy for hover and active states */
+  --color-primary-light: #3366CC;  /* Lighter blue accent for hover/highlight */
+  --color-secondary: #F0F0F0;      /* Off-white cards and section backgrounds */
+  --color-secondary-dark: #D9D9D9; /* Gray for borders and subtle shadows */
+  --color-secondary-light: #FFFFFF;/* Pure white for contrast */
+  --color-accent: #C8102E;         /* Classic baseball red for buttons and highlights */
+  --color-accent-light: #E63946;   /* Lighter red for hover/active */
+  --color-dark: #1F2937;           /* Default dark text */
+  --color-light: #F9FAFB;          /* Page background */
+  --color-muted: #6B7280;          /* Muted text */
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-light text-dark;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
+    color: var(--color-primary);
+  }
+
+  a {
+    color: var(--color-accent);
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--color-accent-light);
+  }
+
+  p {
+    color: var(--color-dark);
   }
 }
 
@@ -38,30 +51,39 @@
   .container-custom {
     @apply max-w-7xl mx-auto px-6 md:px-10 lg:px-12;
   }
-  
+
   .btn-primary {
-    @apply bg-primary text-white px-8 py-3 rounded-md font-semibold 
-           transition-all duration-300 hover:bg-primary-dark hover:shadow-lg 
+    @apply bg-accent text-white px-8 py-3 rounded-md font-semibold
+           transition-all duration-300 hover:bg-accent-light hover:shadow-lg
            transform hover:-translate-y-0.5;
   }
-  
+
   .btn-secondary {
-    @apply bg-secondary text-primary-dark px-8 py-3 rounded-md font-semibold 
-           transition-all duration-300 hover:bg-secondary-dark hover:shadow-lg 
+    @apply bg-primary text-white px-8 py-3 rounded-md font-semibold
+           transition-all duration-300 hover:bg-primary-dark hover:shadow-lg
            transform hover:-translate-y-0.5;
   }
-  
+
   .btn-outline {
     @apply border-2 border-primary text-primary px-8 py-3 rounded-md 
            font-semibold transition-all duration-300 hover:bg-primary 
            hover:text-white hover:shadow-lg;
   }
-  
+
   .section-title {
     @apply text-3xl md:text-4xl font-bold text-primary mb-4 text-center;
   }
-  
+
   .section-subtitle {
-    @apply text-lg text-dark/60 text-center max-w-3xl mx-auto mb-12;
+    @apply text-lg text-muted text-center max-w-3xl mx-auto mb-12;
+  }
+
+  /* Card shadows & highlights */
+  .card {
+    @apply bg-secondary-light border border-secondary-dark rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg;
+  }
+
+  .testimonial-card {
+    @apply bg-secondary shadow-md rounded-lg p-6 border-t-4 border-primary hover:shadow-xl transition-all duration-300;
   }
 }

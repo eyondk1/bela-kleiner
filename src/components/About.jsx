@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHeart, FaBook, FaGraduationCap, FaStar, FaLightbulb, FaUser, FaMapMarkerAlt, FaPenFancy, FaUsers } from 'react-icons/fa';
+import { FaHeart, FaBook, FaGraduationCap, FaStar, FaLightbulb, FaUser, FaMapMarkerAlt, FaPenFancy, FaUsers, FaFootballBall, FaBaseballBall } from 'react-icons/fa';
 import { authorData } from '../data/authorData';
 
 const About = () => {
@@ -8,21 +8,21 @@ const About = () => {
       <div className="container-custom mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 rounded-md mb-4">
-            <FaHeart size={14} className="text-primary" />
+            <FaBaseballBall size={14} className="text-primary" />
             <span className="text-primary font-semibold text-sm">Meet the Author</span>
-            <FaHeart size={14} className="text-primary" />
+            <FaBaseballBall size={14} className="text-primary" />
           </div>
-          <h2 className="section-title">About Carol Cutrona</h2>
+          <h2 className="section-title">About Jim Street</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="section-subtitle">
-            A passionate historian and storyteller bringing women's Civil War contributions to light
+            Veteran sportswriter sharing four decades of behind-the-scenes baseball, football, and sports journalism
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
             <div className="bg-white rounded-md p-8 shadow-lg border-l-8 border-primary">
-              <FaBook className="text-primary mb-4" size={40} />
+              <FaBaseballBall className="text-primary mb-4" size={40} />
               <p className="text-dark/80 leading-relaxed whitespace-pre-line">
                 {authorData.authorBio.fullBio}
               </p>
@@ -73,12 +73,13 @@ const About = () => {
                 <h3 className="text-xl font-display font-bold">Writing Journey</h3>
               </div>
               <p className="text-white/90 leading-relaxed text-sm">
-                Carol writes in a variety of genres and has written a screenplay based on her novel. Her work has been published in national periodicals, as well as in Braille.
+                Jim Street spent 40 years covering professional sports, especially baseball and football. His memoir "Life from the Press Box" shares behind-the-scenes stories and personal insights from his sportswriting career.
               </p>
-              <div className="flex items-center gap-2 mt-4 text-secondary">
-                <FaBook size={14} />
-                <span className="text-sm">Currently working on: "Maggie"</span>
-                <FaBook size={14} />
+              <div className="flex items-center gap-3 mt-4 text-secondary">
+                <FaBaseballBall size={18} />
+                <span className="text-sm font-semibold">Baseball & MLB Coverage</span>
+                <FaFootballBall size={18} />
+                <span className="text-sm font-semibold">Football & NFL Coverage</span>
               </div>
             </div>
           </div>
