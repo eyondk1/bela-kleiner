@@ -1,13 +1,15 @@
-@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@theme {
+:root {
   --font-display: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
 
   /* Vitamins Book Color Palette */
-  ---color-primary: #B88E2F;       /* Main gold for headings */
---color-primary-dark: #8C6F20;  /* Dark gold for hover or emphasis */
---color-primary-light: #D4A841; /* Light gold accent for highlights */
+  --color-primary: #B88E2F;       /* Main gold for headings */
+  --color-primary-dark: #8C6F20;  /* Dark gold for hover or emphasis */
+  --color-primary-light: #D4A841; /* Light gold accent for highlights */
   --color-secondary: #E0D6C3;      /* Cream / paper background */
   --color-secondary-dark: #C8B89F; /* Slightly darker beige for borders/shadows */
   --color-secondary-light: #FFFFFF;/* Pure white for contrast */
@@ -22,7 +24,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    @apply bg-light text-dark;
+    @apply bg-[var(--color-light)] text-[var(--color-dark)];
     font-family: var(--font-sans);
   }
 
@@ -40,36 +42,38 @@
   .container-custom { @apply max-w-7xl mx-auto px-6 md:px-10 lg:px-12; }
 
   .btn-primary {
-    @apply bg-accent text-white px-8 py-3 rounded-md font-semibold
-           transition-all duration-300 hover:bg-accent-light hover:shadow-lg
+    @apply bg-[var(--color-accent)] text-white px-8 py-3 rounded-md font-semibold
+           transition-all duration-300 hover:bg-[var(--color-accent-light)] hover:shadow-lg
            transform hover:-translate-y-0.5;
   }
 
   .btn-secondary {
-    @apply bg-primary text-white px-8 py-3 rounded-md font-semibold
-           transition-all duration-300 hover:bg-primary-dark hover:shadow-lg
+    @apply bg-[var(--color-primary)] text-white px-8 py-3 rounded-md font-semibold
+           transition-all duration-300 hover:bg-[var(--color-primary-dark)] hover:shadow-lg
            transform hover:-translate-y-0.5;
   }
 
   .btn-outline {
-    @apply border-2 border-primary text-primary px-8 py-3 rounded-md 
-           font-semibold transition-all duration-300 hover:bg-primary 
+    @apply border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-8 py-3 rounded-md 
+           font-semibold transition-all duration-300 hover:bg-[var(--color-primary)] 
            hover:text-white hover:shadow-lg;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-primary mb-4 text-center;
+    @apply text-3xl md:text-4xl font-bold text-[var(--color-primary)] mb-4 text-center;
   }
 
   .section-subtitle {
-    @apply text-lg text-muted text-center max-w-3xl mx-auto mb-12;
+    @apply text-lg text-[var(--color-muted)] text-center max-w-3xl mx-auto mb-12;
   }
 
   .card {
-    @apply bg-secondary border border-secondary-dark rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg;
+    @apply bg-[var(--color-secondary)] border border-[var(--color-secondary-dark)] rounded-lg shadow-md p-6 
+           transition-all duration-300 hover:shadow-lg;
   }
 
   .testimonial-card {
-    @apply bg-secondary shadow-md rounded-lg p-6 border-t-4 border-primary hover:shadow-xl transition-all duration-300;
+    @apply bg-[var(--color-secondary)] shadow-md rounded-lg p-6 border-t-4 border-[var(--color-primary)] 
+           hover:shadow-xl transition-all duration-300;
   }
 }
