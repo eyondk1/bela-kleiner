@@ -73,8 +73,8 @@ const Footer = () => {
         </div>
 
         {/* Quote */}
-        <div className="mt-4 text-center text-xs text-white/30">
-          <p className="flex items-center justify-center gap-1">
+        <div className="mt-4 text-center text-xs text-white/40">
+          <p className="flex items-center justify-center gap-1 text-white/40">
             <FaHeart size={10} className="text-secondary" /> 
             "Sharing the untold stories from four decades of sports journalism"
             <FaHeart size={10} className="text-secondary" />
