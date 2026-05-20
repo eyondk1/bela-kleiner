@@ -1,13 +1,13 @@
 import React from 'react';
-import { FaBook, FaStar, FaQuoteLeft, FaHeart, FaFire, FaBaseballBall, FaFootballBall } from 'react-icons/fa';
+import { FaBook, FaStar, FaQuoteLeft, FaHeart, FaFootballBall, FaBaseballBall, FaFire } from 'react-icons/fa';
 import { authorData } from '../data/authorData';
 
 const BookDetails = () => {
   const book = authorData.book;
 
   return (
-    <section id="book" className="py-20 bg-gradient-to-b from-light to-secondary/10">
-      <div className="container-custom mx-auto">
+    <section id="book" className="py-20 bg-gradient-to-b from-light to-secondary/10 relative">
+      <div className="container-custom mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="section-title">{book.title}</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
@@ -16,7 +16,16 @@ const BookDetails = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        {/* Football logo background */}
+        <div className="absolute bottom-50 left-150 pointer-events-none">
+          <img 
+            src="/images/bookdetailslogo.png" // Replace with your football logo image
+            alt="Football Logo Background"
+            className="opacity-40 w-[500px] md:w-[600px] lg:w-[900px] object-contain"
+          />
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-start relative z-10">
           <div className="relative">
             <div className="bg-white rounded-md p-8 shadow-xl border-2 border-primary/20">
               <div className="mb-6 relative">

@@ -7,11 +7,11 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center pt-20 relative overflow-hidden bg-gradient-to-br from-primary/90 via-primary-dark to-primary">
 
       {/* Baseball logo background */}
-      <div className="absolute inset-0 flex justify-left items-center pointer-events-none">
+      <div className="absolute inset-0 left-20 flex justify-left items-center pointer-events-none">
         <img 
-          src="/images/baseball-logo.png" // Replace with your baseball logo image
+          src="/images/baseball1.png" // Replace with your baseball logo image
           alt="Baseball Logo Background"
-          className="opacity-30 w-[600px] md:w-[100px] lg:w-[800px] object-contain"
+          className="opacity-80 w-[600px] md:w-[100px] lg:w-[800px] object-contain"
         />
       </div>
 
