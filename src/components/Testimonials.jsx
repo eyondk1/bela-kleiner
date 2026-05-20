@@ -6,43 +6,46 @@ const Testimonials = () => {
   const testimonials = authorData.testimonials || [];
 
   return (
-    <section className="py-20 bg-primary/5">
+    <section className="py-20 bg-gradient-to-b from-[#C49A6C]/20 via-[#D4A841]/10 to-[#C49A6C]/20 relative">
       <div className="container-custom mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="section-title">Reader Reviews</h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
-          <p className="text-dark/60">What readers are saying about "{authorData.book.title}"</p>
+        <div className="text-center mb-14">
+          <h2 className="section-title text-[#B88E2F] text-4xl md:text-5xl font-display font-bold">
+            Reader Reviews
+          </h2>
+          <div className="w-24 h-1 bg-[#B88E2F] mx-auto mb-4 rounded-full"></div>
+          <p className="text-[#3B2F2F]/90 text-lg">
+            What readers are saying about "{authorData.book.title}"
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.length > 0 ? (
             testimonials.map((testimonial, idx) => {
-              // Round down rating to display full stars
               const rating = Math.floor(testimonial.rating);
               return (
                 <div
                   key={idx}
-                  className="bg-white rounded-md p-6 shadow-lg border-t-4 border-primary hover:shadow-xl transition-all duration-300"
+                  className="bg-white/50 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-[#B88E2F]/30 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1"
                 >
-                  <FaQuoteRight className="text-primary/30 mb-3" size={28} />
+                  <FaQuoteRight className="text-[#B88E2F]/40 mb-3" size={28} />
 
                   <div className="flex items-center gap-1 mb-3">
                     {[...Array(rating)].map((_, i) => (
-                      <FaStar key={i} size={16} className="text-primary" />
+                      <FaStar key={i} size={16} className="text-[#B88E2F]" />
                     ))}
                   </div>
 
-                  <p className="text-dark/70 text-sm italic mb-4 leading-relaxed">
+                  <p className="text-[#3B2F2F]/80 text-sm italic mb-5 leading-relaxed">
                     "{testimonial.review.substring(0, 200)}..."
                   </p>
 
-                  <div className="flex items-center gap-2 pt-3 border-t border-secondary/20">
-                    <div className="bg-primary/10 p-2 rounded-full">
-                      <FaUser size={14} className="text-primary" />
+                  <div className="flex items-center gap-3 pt-4 border-t border-[#E0D6C3]/20">
+                    <div className="bg-[#B88E2F]/20 p-2 rounded-full">
+                      <FaUser size={14} className="text-[#B88E2F]" />
                     </div>
                     <div>
-                      <p className="font-semibold text-primary text-sm">{testimonial.name}</p>
-                      <div className="flex items-center gap-2 text-xs text-dark/50">
+                      <p className="font-semibold text-[#B88E2F] text-sm">{testimonial.name}</p>
+                      <div className="flex items-center gap-2 text-xs text-[#3B2F2F]/60">
                         <span>{testimonial.title}</span>
                         <span>•</span>
                         <FaCalendarAlt size={10} />
@@ -54,22 +57,24 @@ const Testimonials = () => {
               );
             })
           ) : (
-            <p className="text-center col-span-full text-dark/60">No testimonials available yet.</p>
+            <p className="text-center col-span-full text-[#3B2F2F]/60">
+              No testimonials available yet.
+            </p>
           )}
         </div>
 
         {testimonials.length > 0 && (
-          <div className="text-center mt-8">
-            <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-md shadow-md border border-primary/20">
+          <div className="text-center mt-12">
+            <div className="inline-flex items-center gap-4 bg-white/50 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg border border-[#B88E2F]/30">
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} size={16} className="text-primary" />
+                  <FaStar key={i} size={16} className="text-[#B88E2F]" />
                 ))}
               </div>
-              <span className="font-semibold text-primary">
-                {testimonials.reduce((acc, t) => acc + t.rating, 0) / testimonials.length} average rating
+              <span className="font-semibold text-[#B88E2F]">
+                {(testimonials.reduce((acc, t) => acc + t.rating, 0) / testimonials.length).toFixed(1)} average rating
               </span>
-              <span className="text-dark/50">from readers worldwide</span>
+              <span className="text-[#3B2F2F]/60">from readers worldwide</span>
             </div>
           </div>
         )}
