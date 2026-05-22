@@ -21,7 +21,7 @@ From early observations of mysterious diseases to the development of laboratory 
   },
   
   authorBio: {
-    fullBio: `Bela Kleiner is an independent researcher and author. Outside of her published writing, she maintains a relatively low public profile, as her book was released through a hybrid/indie publishing press (Fulton Books). Her book, "True History of Vitamins," takes a deep dive into how the discovery of micronutrients fundamentally shaped modern science.`,
+    fullBio: `Bela Kleiner is an independent researcher and author. Outside of his published writing, she maintains a relatively low public profile, as his book was released through a hybrid/indie publishing press (Fulton Books). His book, "True History of Vitamins," takes a deep dive into how the discovery of micronutrients fundamentally shaped modern science.`,
     
     education: "",
     memberships: [],

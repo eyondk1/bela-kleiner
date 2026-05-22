@@ -19,7 +19,7 @@ const About = () => {
           <h2 className="section-title text-[#B88E2F]">About Bela Kleiner</h2>
           <div className="w-24 h-1 bg-[#B88E2F] mx-auto mb-6 rounded"></div>
           <p className="section-subtitle text-[#8C6E56]">
-            Bela Kleiner is an independent researcher and author. Her book <strong>{authorData.book.title}</strong> explores the history and discovery of vitamins and micronutrients, detailing the pioneering scientists and experiments that shaped modern biochemistry.
+            Bela Kleiner is an independent researcher and author. His book <strong>{authorData.book.title}</strong> explores the history and discovery of vitamins and micronutrients, detailing the pioneering scientists and experiments that shaped modern biochemistry.
           </p>
         </div>
 

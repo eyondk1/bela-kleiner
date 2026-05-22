@@ -4,7 +4,7 @@ import { authorData } from '../data/authorData';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3B2F2F] text-[#E0D6C3]/80 py-10 relative overflow-hidden border-t border-[#B88E2F]">
+    <footer id="contact" className="bg-[#3B2F2F] text-[#E0D6C3]/80 py-10 relative overflow-hidden border-t border-[#B88E2F]">
       {/* Background glow */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-[#B88E2F]/20 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#E0D6C3]/15 rounded-full blur-3xl -z-10"></div>

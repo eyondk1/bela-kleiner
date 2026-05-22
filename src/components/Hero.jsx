@@ -54,7 +54,7 @@ const Hero = () => {
           <div className="relative flex justify-center">
             <div className="relative rounded-md overflow-hidden shadow-2xl max-w-md mx-auto bg-[#3B2F2F]/30 p-6 border-4 border-[#B88E2F]">
               <img
-                src="/images/bela.jpg" // Replace with Bela Kleiner's image
+                src="/images/bela.webp" // Replace with Bela Kleiner's image
                 alt={authorData.fullName}
                 className="w-full h-auto object-cover rounded-md shadow-xl"
                 style={{ maxHeight: '450px' }}
